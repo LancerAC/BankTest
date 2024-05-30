@@ -14,20 +14,20 @@ import java.time.LocalDateTime;
 @Setter
 public class SearchCriteriaDTO {
 
-    @NotNull(message = "Введите дату рождения")
+
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
     private LocalDate birthDate;
 
-    @NotNull(message = "Введите номер телефона")
+
     private String phoneNumber;
 
-    @NotNull(message = "Введите имя")
+
     private String firstName;
 
-    @NotNull(message = "Введите фамилию")
+
     private String middleName;
 
-    @NotNull(message = "Введите отчество")
+
     private String lastName;
 
     @Email

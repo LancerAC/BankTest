@@ -66,3 +66,76 @@
 2024-05-29 19:49:57 DEBUG AccountService:55 - Client balance updated
 2024-05-29 19:49:57 DEBUG AccountService:55 - Client balance updated
 2024-05-29 19:50:57 DEBUG AccountService:55 - Client balance updated
+2024-05-30 11:59:14 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:37:49 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:40:10 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:41:10 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:41:13 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:41:13 INFO  AccountService:30 - Account created
+2024-05-30 12:41:13 DEBUG UserController:57 - Возникло исключение. Запрос не выполнен
+2024-05-30 12:41:27 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:41:27 INFO  AccountService:30 - Account created
+2024-05-30 12:41:27 DEBUG UserController:57 - Возникло исключение. Запрос не выполнен
+2024-05-30 12:41:39 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:41:39 INFO  AccountService:30 - Account created
+2024-05-30 12:41:39 DEBUG UserController:57 - Возникло исключение. Запрос не выполнен
+2024-05-30 12:42:10 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:43:10 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:43:18 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:43:18 INFO  AccountService:30 - Account created
+2024-05-30 12:43:18 DEBUG UserController:57 - Возникло исключение. Запрос не выполнен
+2024-05-30 12:43:19 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:43:19 INFO  AccountService:30 - Account created
+2024-05-30 12:43:19 DEBUG UserController:57 - Возникло исключение. Запрос не выполнен
+2024-05-30 12:51:02 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 12:51:33 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:51:33 INFO  AccountService:30 - Account created
+2024-05-30 12:51:34 INFO  UserService:67 - User created
+2024-05-30 12:51:53 INFO  UserController:48 - Запрос на создание пользователя принят
+2024-05-30 12:51:53 INFO  AccountService:30 - Account created
+2024-05-30 12:51:53 INFO  UserService:67 - User created
+2024-05-30 12:52:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:52:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:52:44 INFO  AuthController:39 - Запрос на аутентификацию получен
+2024-05-30 12:53:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:53:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:53:41 INFO  AccountController:31 - Запрос на перевод принят
+2024-05-30 12:53:41 INFO  AccountService:76 - Деньги переведены успешно
+2024-05-30 12:54:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:54:02 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:55:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:55:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:55:12 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 12:55:16 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 12:56:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:56:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:56:40 INFO  AuthController:39 - Запрос на аутентификацию получен
+2024-05-30 12:57:05 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 12:57:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:57:07 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:58:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:58:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:59:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:59:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 12:59:29 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 12:59:31 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 13:00:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:00:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:01:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:01:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:02:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:02:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:03:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:03:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:04:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:04:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:05:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:06:08 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:06:31 DEBUG AccountService:55 - Client balance updated
+2024-05-30 13:06:50 INFO  UserController:70 - Запрос на поиск принят
+2024-05-30 13:08:11 INFO  AccountService:43 - All clients have reached the maximum balance. Skipping balance update.
+2024-05-30 13:08:12 INFO  AccountService:76 - Деньги переведены успешно
+2024-05-30 13:08:12 DEBUG AccountService:65 - Невозможно перевести деньги
+2024-05-30 13:09:24 INFO  AccountController:31 - Запрос на перевод принят
+2024-05-30 13:09:24 INFO  AccountService:76 - Деньги переведены успешно
+2024-05-30 13:09:40 INFO  UserController:70 - Запрос на поиск принят

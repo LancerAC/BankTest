@@ -7,10 +7,15 @@ spring:
     password: ${POSTGRES_PASSWORD}
   jpa:
     hibernate:
-      ddl-auto: update
+      ddl-auto: none
+  liquibase:
+    change-log: liquibase/db.changelog.yaml
+    enabled: true
   main:
     allow-circular-references: true
+
 token:
   secret: ${SECRET_TOKEN}
+
 server:
   port: 8081

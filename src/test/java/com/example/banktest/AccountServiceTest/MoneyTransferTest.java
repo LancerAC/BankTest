@@ -1,35 +1,16 @@
-package com.example.banktest;
+package com.example.banktest.AccountServiceTest;
 
 import com.example.banktest.Entity.BankAccount;
 import com.example.banktest.Entity.User;
 import com.example.banktest.Repository.AccountRepository;
 import com.example.banktest.Repository.UserRepository;
 import com.example.banktest.Service.AccountService;
-import com.example.banktest.Service.UserService;
 import jakarta.transaction.Transactional;
-import lombok.SneakyThrows;
-import org.junit.Assert;
 import org.junit.jupiter.api.*;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.Mockito;
-import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.context.annotation.Bean;
-import org.springframework.http.MediaType;
-import org.springframework.security.core.Transient;
-import org.springframework.security.test.context.support.WithAnonymousUser;
-import org.springframework.security.test.context.support.WithMockUser;
-import org.springframework.security.test.context.support.WithSecurityContext;
 import org.springframework.test.context.DynamicPropertyRegistry;
 import org.springframework.test.context.DynamicPropertySource;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
@@ -38,8 +19,6 @@ import org.testcontainers.utility.DockerImageName;
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 @SpringBootTest
 @Transactional

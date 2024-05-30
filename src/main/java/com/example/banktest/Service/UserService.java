@@ -56,15 +56,15 @@ public class UserService implements UserDetailsService {
                 .build();
 
         if (userRepository.findByUserName(userDto.getUserName()) != null
-        || userRepository.findByPhoneNumber(userDto.getPhoneNumber()) != null
-        || userRepository.findByEmail(userDto.getEmail()) != null
-        || !validatePhoneNumber(userDto.getPhoneNumber())
-        || !isValidIsoDate(userDto.getBirthDate())){
-            log.debug("Can't create user");
+            || userRepository.findByPhoneNumber(userDto.getPhoneNumber()) != null
+            || userRepository.findByEmail(userDto.getEmail()) != null
+            || !validatePhoneNumber(userDto.getPhoneNumber())
+            || !isValidIsoDate(userDto.getBirthDate())) {
+            log.debug("Невозможно создать пользователя");
             throw new RuntimeException();
-        } else{
+        } else {
             userRepository.save(user);
-            log.info("User created");
+            log.info("Пользователь создан");
         }
     }
 
@@ -78,9 +78,9 @@ public class UserService implements UserDetailsService {
     }
 
     private static boolean validatePhoneNumber(String phoneNumber) {
-            Pattern pattern = Pattern.compile(PHONE_REGEX);
-            Matcher matcher = pattern.matcher(phoneNumber);
-            return matcher.matches();
+        Pattern pattern = Pattern.compile(PHONE_REGEX);
+        Matcher matcher = pattern.matcher(phoneNumber);
+        return matcher.matches();
 
     }
 
@@ -97,7 +97,7 @@ public class UserService implements UserDetailsService {
     }
 
     private static Date parseDate(LocalDate date) {
-        if(date == null){
+        if (date == null) {
             return new Date(1, 01, 01);
         } else {
             return Date.valueOf(date);

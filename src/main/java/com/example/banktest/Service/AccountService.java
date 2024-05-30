@@ -27,7 +27,7 @@ public class AccountService {
                 .initialBalance(moneyAmount)
                 .build();
 
-        log.info("Account created");
+        log.info("Аккаунт создан");
         return accountRepository.save(account);
     }
 
@@ -40,7 +40,7 @@ public class AccountService {
                 .allMatch(ba -> ba.getCurrentBalance() >= ba.getInitialBalance() * 2.07);
 
         if (allAtMaxBalance) {
-            log.info("All clients have reached the maximum balance. Skipping balance update.");
+            log.info("Баланс всех пользователей достиг максимума");
             return;
         }
 
@@ -52,7 +52,7 @@ public class AccountService {
                 bankAccount.setCurrentBalance(newBalance);
                 accountRepository.save(bankAccount);
 
-                log.debug("Client balance updated");
+                log.debug("Баланс клиента обновлен");
             }
         }
     }

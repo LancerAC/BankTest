@@ -22,6 +22,7 @@
         <lombok.version>1.18.32</lombok.version>
         <jwt.version>0.11.5</jwt.version>
         <mockito.version>5.8.0</mockito.version>
+        <liquibase.version>4.25.0</liquibase.version>
     </properties>
 
 
@@ -117,6 +118,12 @@
             <groupId>log4j</groupId>
             <artifactId>log4j</artifactId>
             <version>1.2.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.liquibase</groupId>
+            <artifactId>liquibase-core</artifactId>
+            <version>${liquibase.version}</version>
         </dependency>
 
         <dependency>
