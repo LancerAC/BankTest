@@ -29,7 +29,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     User findByPhoneNumber(String phoneNumber);
 
     User findByEmail(String email);
-    //TODO Обработать ошибки
+
     @Query("SELECT u FROM User u WHERE " +
            "(:birthDate IS NULL OR u.birthDate > to_date(:birthDate, 'YYYY-MM-DD')) AND " +
            "(:phoneNumber IS NULL OR u.phoneNumber = :phoneNumber) AND " +

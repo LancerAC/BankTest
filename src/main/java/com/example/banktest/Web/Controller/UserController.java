@@ -34,12 +34,12 @@ import java.util.List;
 @Log4j
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/api")
+@RequestMapping("/api/users")
 public class UserController {
+
     private final UserService userService;
     private final AccountService accountService;
-    private final JwtService jwtService;
-    private final AuthenticationManager authenticationManager;
+
     
     @PostMapping("/create")
     public ResponseEntity<?> createUser(@Validated @RequestBody UserDTO userDto) {
@@ -79,24 +79,6 @@ public class UserController {
         }
     }
 
-    @PostMapping("/transfer")
-    public ResponseEntity<?> transferMoney(@Validated @RequestBody TransferRequestDTO request) {
-        try {
-            log.info("Запрос на перевод принят");
-            accountService.transferMoney(request.getFromAccountNumber(),
-                    request.getToAccountNumber(),
-                    request.getAmount());
-        } catch (Exception e) {
-            String errorMessage = "Невозможно провести транзакцию." +
-                                  " Проверьте заполненные данные и повторите снова";
-            log.debug("Возникло исключение. Невозможно выполнить перевод денег");
-            ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST, errorMessage);
-            return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
-        }
-        return ResponseEntity.ok("Деньги переведены успешно");
-    }
-
-
     @ExceptionHandler(BindException.class)
     public ResponseEntity<RequestError> handleExceptions(BindException ex) {
         RequestError requestError = new RequestError(System.currentTimeMillis(),
@@ -106,18 +88,5 @@ public class UserController {
                 HttpStatus.BAD_REQUEST);
 
 
-    }
-    @PostMapping("/generateToken")
-    public String authenticateAndGetToken(@Validated @RequestBody AuthRequestDTO authRequestDTO) {
-        log.info("Запрос на аутентификацию получен");
-        Authentication authentication = authenticationManager.authenticate(
-                new UsernamePasswordAuthenticationToken(authRequestDTO.getUserName(),
-                        authRequestDTO.getPassword()));
-        if (authentication.isAuthenticated()) {
-            return jwtService.generateToken(authRequestDTO.getUserName());
-        } else {
-            log.debug("Возникло иключение");
-            throw new UsernameNotFoundException("invalid user request !");
-        }
     }
 }

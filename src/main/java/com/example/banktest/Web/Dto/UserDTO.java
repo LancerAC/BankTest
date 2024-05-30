@@ -14,7 +14,7 @@ import java.time.LocalDate;
 @Setter
 public class UserDTO {
 
-    //todo
+
     @NotNull
     private String  phoneNumber;
 

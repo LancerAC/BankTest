@@ -28,19 +28,17 @@ public class SecurityConfig {
     @Autowired
     private JwtAuthFilter authFilter;
 
-    // User Creation
     @Bean
     public UserDetailsService userDetailsService() {
         return new UserInfoService();
     }
 
-    // Configuring HttpSecurity
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http.csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth.requestMatchers( "/api/create", "/api/generateToken", "/swagger-ui/**","/v3/api-docs/**").permitAll())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/transfer").authenticated())
-                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/search").authenticated())
+                .authorizeHttpRequests(auth -> auth.requestMatchers( "/api/users/create", "/api/auth/generateToken", "/swagger-ui/**","/v3/api-docs/**").permitAll())
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/accounts/transfer").authenticated())
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/users/search").authenticated())
                 .sessionManagement(sess -> sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .securityContext((securityContext) -> securityContext
                         .securityContextRepository(new HttpSessionSecurityContextRepository())
@@ -50,7 +48,6 @@ public class SecurityConfig {
                 .build();
     }
 
-    // Password Encoding
     @Bean
     public PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
