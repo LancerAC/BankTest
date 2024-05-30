@@ -1,3 +1,6 @@
+SET search_path TO bank;
+
+
 CREATE TABLE users
 (
     id           SERIAL PRIMARY KEY,

@@ -1,3 +1,5 @@
+SET search_path TO bank;
+
 CREATE TABLE bank_account
 (
     id              SERIAL PRIMARY KEY,

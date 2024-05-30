@@ -1,0 +1,27 @@
+version: '3.0'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: bank
+    ports:
+      - '8081:8081'
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/company?currentSchema=bank
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root
+      - SECRET_TOKEN="5367566B59703373367639792F423F4528482B4D4439634969346349693469343496251655468576D5A71347437"
+  db:
+    restart: always
+    image: 'postgres:latest'
+    container_name: company
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_DB=company
+    ports:
+      - '5432:5432'
+
