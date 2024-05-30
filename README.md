@@ -51,7 +51,11 @@
 
  Поиск пользователя по критериям
  ![image](https://github.com/LancerAC/BankTest/assets/152904551/a7939d8e-e5af-43f0-967e-d7b79459ed28)
+
+ 
  ![image](https://github.com/LancerAC/BankTest/assets/152904551/026c8e70-30ea-4a3b-944d-22f08bb9b438)
+
+ 
  ![image](https://github.com/LancerAC/BankTest/assets/152904551/9ff37dd3-4e88-42f0-a76d-c8a57109206d)
 
 
